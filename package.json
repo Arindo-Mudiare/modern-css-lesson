@@ -1,0 +1,23 @@
+{
+  "name": "modern_css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arindo-Mudiare/modern-css-lesson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arindo-Mudiare/modern-css-lesson/issues"
+  },
+  "homepage": "https://github.com/Arindo-Mudiare/modern-css-lesson#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0"
+  }
+}
