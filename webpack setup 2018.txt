@@ -1,0 +1,82 @@
+    FOR NPM USER --
+    
+    WEBPACK --
+
+    npm install webpack webpack-cli webpack-dev-server --save-dev
+
+    BABEL --
+
+    npm install babel-cli babel-core babel-preset-env babel-preset-react babel-register --save-dev
+    npm install babel-cli babel-core babel-preset-env babel-register --save-dev
+
+    JS/JSX & CSS Loaders --
+
+    npm install babel-loader style-loader css-loader
+
+    FOR YARN USERS --
+
+    WEBPACK --
+
+    yarn add webpack webpack-cli webpack-dev-server --save-dev
+
+    BABEL --
+
+    yarn add babel-cli babel-core babel-preset-env babel-preset-react babel-register --save-dev
+
+    JS/JSX & CSS Loaders --
+
+    yarn add babel-loader style-loader css-loader
+
+    .babelrc file setup --
+
+            {
+        "presets": [
+            "env",
+            "react"
+        ]
+        }
+
+        WEBPACK CONFIG FILE --
+
+        // Imports
+const path = require('path');
+require("babel-register");
+
+// Webpack Configuration
+const config = {
+
+  // Entry
+  entry: {'PATH TO YOUR INDEX.JSX FILE'},
+
+  // Output
+  output: {
+    path: path(__dirname, 'PATH TO SEND BUNDLED/TRANSPILED CODE'),
+    filename: 'bundle.js'
+  },
+
+  // Loaders
+  module: {
+    rules : [
+      // JavaScript/JSX Files
+      {
+      test: /\.jsx$/,
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: ['babel-loader']
+      },
+      // CSS Files
+      {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+      test: /\.sass$/,
+      use: ['style-loader', 'sass-loader']
+      }
+    ]
+  },
+
+  // Plugins
+  plugins: []
+};
+
+// Exports
+module.exports = config;
