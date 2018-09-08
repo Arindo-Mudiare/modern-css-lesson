@@ -982,6 +982,10 @@ a {
         
       
     }
+
+            .primary-nav a.is-current-link {
+                color: #fabb69;
+            }
     }
 
 .site-header {
@@ -999,8 +1003,13 @@ a {
 @media (min-width: 800px) {
 
 .site-header {
+        position: fixed;
         background-color: rgba(52,73,94, .3)
 }
+
+        .site-header--dark {
+            background-color: rgba(23,51,72,.85);
+        }
     }
 
 @media (min-width: 800px) {
@@ -1019,6 +1028,9 @@ a {
                 transform: translateX(-50%) scale(.8);
         -webkit-transform-origin: 50% 0%;
                 transform-origin: 50% 0%;
+        transition: -webkit-transform .3s ease-out;
+        transition: transform .3s ease-out;
+        transition: transform .3s ease-out, -webkit-transform .3s ease-out;
         background-color: #34495e;
         padding: 25px 36px;
     }
@@ -1030,6 +1042,11 @@ a {
             -webkit-transform: translateX(0);
                     transform: translateX(0)
     }
+
+            .site-header--dark .site-header__logo {
+                -webkit-transform: scale(.545);
+                        transform: scale(.545);
+            }
     }
 
 .site-header__menu-icon {
