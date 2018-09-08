@@ -469,6 +469,10 @@ a {
         max-width: 976px;
     }
 
+.wrapper--narrow {
+        max-width: 470px;
+    }
+
 .wrapper--no-padding-until-medium {
         padding-left: 0;
         padding-right: 0;
@@ -772,6 +776,11 @@ a {
 
 .section-title--blue {
         color: #34495e;
+    }
+
+.section-title--less-b-margin{
+        margin-bottom: 1.3rem;
+        margin-top: 0; 
     }
 
 .section-title__icon {
@@ -1164,3 +1173,99 @@ a {
         -webkit-transform: scale(1);
                 transform: scale(1);
     }
+
+.modal {
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, .93);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    transition: all .5s ease-out;
+}
+
+.modal--is-visible {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+.modal__inner {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        margin-top: 25vh;
+        margin-bottom: 25vh;
+    }
+
+.modal__description {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 1.65;
+    }
+
+.modal strong {
+        font-weight: 550;
+    }
+
+.modal__close {
+        position: absolute;
+        color: #34495e;
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+        -webkit-transform: scaleX(1.2);
+                transform: scaleX(1.2);
+        -webkit-transform: 100% 0;
+                transform: 100% 0;
+        cursor: pointer;
+    }
+
+.modal__close:hover {
+            color: #e67e22;
+        }
+
+.icon {
+    background-color: #e67e22;
+     display: inline-block;
+          /* position: absolute; */
+          top: 50%;
+          left: 50%;
+          width: 33%;
+          height: 63px; 
+          margin-left: 20px;
+}
+
+@media (min-width: 530px) {
+
+.icon {
+              width: 72px;
+              height: 72px;
+              margin: 0 5px
+}
+    }
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons__icons {
+      background-color: #e67e22;
+      display: inline-block;
+      margin: 0 5px 5px 5px;
+      width: 72px;
+      height: 72px;
+      position: relative;
+  }
+
+.social-icons__icons__icon {
+          
+
+      }
